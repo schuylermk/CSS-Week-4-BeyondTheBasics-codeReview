@@ -1,4 +1,4 @@
-## Lux
+## Alaskar Wilde
 
 **Rebuild of Arctic Wild**
 

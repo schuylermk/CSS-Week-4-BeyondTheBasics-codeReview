@@ -53,6 +53,9 @@
       height: 500px;
       background-size: cover;
       background-image: url("../img/hero.jpg"); }
+      @media screen and (min-width: 750px) {
+        #header-viewport header #hero {
+          height: 1000px; } }
       #header-viewport header #hero #hero-text {
         display: flex;
         flex-direction: column;
@@ -65,15 +68,38 @@
           width: 120px; }
         #header-viewport header #hero #hero-text h1 {
           color: white;
-          font-size: 2em; }
-        #header-viewport header #hero #hero-text h4 {
+          font-size: 3em;
+          font-family: serif;
+          font-weight: 100;
+          letter-spacing: 3px; }
+        #header-viewport header #hero #hero-text .heading-sep {
+          background-color: white;
+          width: 300px;
+          height: 4px; }
+        #header-viewport header #hero #hero-text p {
           display: flex;
           justify-content: center;
           color: white;
-          font-weight: 100;
+          letter-spacing: 2px;
+          font-weight: lighter;
+          font-family: 'Fjalla One', serif;
           text-transform: uppercase; }
+        @media screen and (min-width: 750px) {
+          #header-viewport header #hero #hero-text h1 {
+            font-size: 5em; }
+          #header-viewport header #hero #hero-text p {
+            font-size: 1.5em; } }
     #header-viewport header #navigation-category {
       display: none; }
+
+#mid-bar {
+  height: 125px;
+  width: 100%;
+  margin: -5px 1px;
+  background-image: url("../img/texture-bar.png");
+  background-size: cover;
+  text-align: center;
+  background-color: gray; }
 
 .viewport {
   background-color: gray;
@@ -157,5 +183,18 @@
       .viewport #wrapper .slide6 a {
         background-image: url("../img/icon-custom.svg");
         background-size: cover; }
+
+footer {
+  padding: 1em;
+  background-image: url("../img/texture-bar.png");
+  background-size: cover;
+  text-align: center;
+  background-color: gray;
+  font-family: 'Fjalla One', serif; }
+  footer a {
+    text-decoration: none;
+    color: lightgray; }
+  footer:last-child {
+    color: #758b7d; }
 
 /*# sourceMappingURL=styles.css.map */

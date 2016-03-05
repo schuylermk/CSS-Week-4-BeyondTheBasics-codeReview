@@ -64,6 +64,9 @@
       height: 500px;
       background-size: cover;
       background-image: url("../img/hero.jpg");
+      @media screen and (min-width: 750px) {
+        height: 1000px;
+      }
       #hero-text {
         display: flex;
         flex-direction: column;
@@ -77,14 +80,32 @@
         }
         h1 {
           color: white;
-          font-size: 2em;
+          font-size: 3em;
+          font-family: serif;
+          font-weight: 100;
+          letter-spacing: 3px;
         }
-        h4 {
+        .heading-sep {
+          background-color: white;
+          width: 300px;
+          height: 4px;
+        }
+        p {
           display: flex;
           justify-content: center;
           color: white;
-          font-weight: 100;
+          letter-spacing: 2px;
+          font-weight: lighter;
+          font-family: 'Fjalla One', serif;
           text-transform: uppercase;
+        }
+        @media screen and (min-width: 750px) {
+          h1 {
+            font-size: 5em;
+          }
+          p {
+            font-size: 1.5em;
+          }
         }
       }
     }
@@ -92,6 +113,16 @@
       display: none;
     }
   }
+}
+
+#mid-bar {
+  height: 125px;
+  width: 100%;
+  margin: -5px 1px;
+  background-image: url("../img/texture-bar.png");
+  background-size: cover;
+  text-align: center;
+  background-color: gray;
 }
 
 .viewport {
@@ -200,5 +231,21 @@
         background-size: cover;
       }
     }
+  }
+}
+
+footer {
+  padding: 1em;
+  background-image: url("../img/texture-bar.png");
+  background-size: cover;
+  text-align: center;
+  background-color: gray;
+  font-family: 'Fjalla One', serif;
+  a {
+    text-decoration: none;
+    color: lightgray;
+  }
+  &:last-child {
+    color: #758b7d;
   }
 }

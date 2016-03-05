@@ -1,0 +1,204 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+#header-viewport {
+  display: flex;
+  flex-direction: column;
+  header {
+    display: flex;
+    flex-direction: column;
+    #navigation-main {
+      display: flex;
+      .container {
+        position: absolute;
+        width: 100vw;
+        z-index: 99;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        nav {
+          display: none;
+        }
+        #logo {
+          display: flex;
+          padding: 35px 0 0 35px;
+          a {
+            display: flex;
+            align-items: center;
+            width: 50vw;
+            height: 40px;
+            color: white;
+            text-decoration: none;
+            img {
+              height: 100%;
+            }
+            h4 {
+              margin-left: 20px;
+              text-transform: uppercase;
+              font-size: 1.5em;
+              font-weight: 200;
+            }
+          }
+        }
+        nav {
+          display: none;
+        }
+        #navigation-right {
+          display: flex;
+          width: 100%;
+          justify-content: flex-end;
+          padding: 35px 50px 0 0;
+          .line {
+            height: 2px;
+            width: 30px;
+            background-color: white;
+            margin-bottom: 4px;
+          }
+        }
+      }
+    }
+    #hero {
+      display: flex;
+      height: 500px;
+      background-size: cover;
+      background-image: url("../img/hero.jpg");
+      #hero-text {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        img {
+          display: flex;
+          height: 80px;
+          width: 120px;
+        }
+        h1 {
+          color: white;
+          font-size: 2em;
+        }
+        h4 {
+          display: flex;
+          justify-content: center;
+          color: white;
+          font-weight: 100;
+          text-transform: uppercase;
+        }
+      }
+    }
+    #navigation-category {
+      display: none;
+    }
+  }
+}
+
+.viewport {
+  background-color: gray;
+  display: flex;
+  width: 100%;
+  #wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    padding: 2em;
+    @media screen and (min-width: 768px) {
+      padding: 0;
+      flex-flow: row wrap;
+      & > * {
+
+
+      }
+    }
+
+    .slide {
+      height: 250px;
+      margin-bottom: 2em;
+      padding: 2em;
+      border-radius: 4px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      @media screen and (min-width: 768px) {
+        margin: 0;
+        height: 500px;
+        border-radius: 0;
+        width: 50%;
+        background-position: center;
+        &:first-child {
+          width: 100%;
+        }
+        &:nth-of-type(6) {
+          width: 100%;
+        }
+      }
+
+      a {
+        width: 80px;
+        height: 80px;
+        margin: auto;
+        border-radius: 50%;
+        background-color: black;
+        opacity: 0.5;
+      }
+      h3 {
+        align-self: flex-start;
+        color: white;
+        font-family: 'Fjalla One', sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+    }
+    .slide1 {
+      background-image: url("../img/home-raft.jpg");
+      background-size: cover;
+
+      a {
+        background-image: url("../img/icon-raft.svg");
+        background-size: cover;
+      }
+    }
+    .slide2 {
+      background-image: url("../img/home-basecamp.jpg");
+      background-size: cover;
+      a {
+        background-image: url("../img/icon-basecamp.svg");
+        background-size: cover;
+      }
+    }
+    .slide3 {
+      background-image: url("../img/home-backpacking.jpg");
+      background-size: cover;
+      a {
+        background-image: url("../img/icon-backpacking.svg");
+        background-size: cover;
+      }
+    }
+    .slide4 {
+      background-image: url("../img/home-canoe.jpg");
+      background-size: cover;
+      a {
+        background-image: url("../img/icon-canoe.svg");
+        background-size: cover;
+      }
+    }
+    .slide5 {
+      background-image: url("../img/home-photo.jpg");
+      background-size: cover;
+      a {
+        background-image: url("../img/icon-photography.svg");
+        background-size: cover;
+      }
+    }
+    .slide6 {
+      background-image: url("../img/home-custom.jpg");
+      background-size: cover;
+      a {
+        background-image: url("../img/icon-custom.svg");
+        background-size: cover;
+      }
+    }
+  }
+}

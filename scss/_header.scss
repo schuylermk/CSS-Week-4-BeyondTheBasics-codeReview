@@ -48,10 +48,16 @@
           justify-content: flex-end;
           padding: 35px 50px 0 0;
           .line {
-            height: 2px;
-            width: 30px;
+            height: 4px;
+            width: 2.5em;
             background-color: white;
             margin-bottom: 4px;
+            &:first-child {
+              border-radius: 2px 2px 0 0;
+            }
+            &:last-child {
+              border-radius: 0 0 2px 2px;
+            }
           }
         }
       }
@@ -59,11 +65,8 @@
 
     #hero {
       display: flex;
-      height: 500px;
-      width: 100%;
-      background-image: url("../img/hero.jpg");
-      background-size: cover;
-      @media screen and (min-width: 750px) {
+      @include bg-img("../img/hero.jpg", auto, 500px);
+      @media screen and (min-width: 960px) {
         height: 1000px;
       }
       #hero-text {

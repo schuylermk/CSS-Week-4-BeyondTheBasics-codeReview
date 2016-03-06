@@ -1,0 +1,104 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.viewport {
+  background-color: gray;
+  display: flex;
+  width: 100%;
+  #wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    padding: 2em;
+    @media screen and (min-width: 768px) {
+      padding: 0;
+      flex-flow: row wrap;
+    }
+    .slide {
+      @include slide;
+      @media screen and (min-width: 768px) {
+        margin: 0;
+        height: 500px;
+        border-radius: 0;
+        width: 50%;
+        background-position: center;
+        &:first-child {
+          width: 100%;
+        }
+        &:nth-of-type(6) {
+          width: 100%;
+        }
+
+        &:hover {
+          a {
+            transition: all .4s ease-in-out;
+            transform: scale(1.25);
+          }
+      }
+      a {
+        @include slide-icon;
+        }
+      }
+      h3 {
+        align-self: flex-start;
+        @include fjalla;
+        .sep {
+          background-color: #dc7725;
+          width: 2em;
+          height: 5px;
+        }
+      }
+    }
+    .slide1 {
+      background-image: url("../img/raft.jpg");
+      background-size: cover;
+      a {
+        background-image: url("../img/icon-raft.svg");
+        background-size: cover;
+      }
+    }
+    .slide2 {
+      background-image: url("../img/basecamp.jpg");
+      background-size: cover;
+      a {
+        background-image: url("../img/icon-basecamp.svg");
+        background-size: cover;
+      }
+    }
+    .slide3 {
+      background-image: url("../img/backpacking.jpg");
+      background-size: cover;
+      a {
+        background-image: url("../img/icon-backpacking.svg");
+        background-size: cover;
+      }
+    }
+    .slide4 {
+      background-image: url("../img/canoe.jpg");
+      background-size: cover;
+      a {
+        background-image: url("../img/icon-canoe.svg");
+        background-size: cover;
+      }
+    }
+    .slide5 {
+      background-image: url("../img/photo.jpg");
+      background-size: cover;
+      a {
+        background-image: url("../img/icon-photography.svg");
+        background-size: cover;
+      }
+    }
+    .slide6 {
+      background-image: url("../img/custom.jpg");
+      background-size: cover;
+      a {
+        background-image: url("../img/icon-custom.svg");
+        background-size: cover;
+      }
+    }
+  }
+}

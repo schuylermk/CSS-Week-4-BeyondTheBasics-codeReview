@@ -39,17 +39,22 @@
         justify-content: flex-end;
         padding: 35px 50px 0 0; }
         #header-viewport header #navigation-main .container #navigation-right .line {
-          height: 2px;
-          width: 30px;
+          height: 4px;
+          width: 2.5em;
           background-color: white;
           margin-bottom: 4px; }
+          #header-viewport header #navigation-main .container #navigation-right .line:first-child {
+            border-radius: 2px 2px 0 0; }
+          #header-viewport header #navigation-main .container #navigation-right .line:last-child {
+            border-radius: 0 0 2px 2px; }
   #header-viewport header #hero {
     display: flex;
+    width: auto;
     height: 500px;
-    width: 100%;
     background-image: url("../img/hero.jpg");
+    background-position: center;
     background-size: cover; }
-    @media screen and (min-width: 750px) {
+    @media screen and (min-width: 960px) {
       #header-viewport header #hero {
         height: 1000px; } }
     #header-viewport header #hero #hero-text {
@@ -90,15 +95,6 @@
   box-sizing: border-box;
   margin: 0; }
 
-#mid-bar {
-  height: 125px;
-  width: 100%;
-  margin: -5px 1px;
-  background-image: url("../img/texture-bar.png");
-  background-size: cover;
-  text-align: center;
-  background-color: gray; }
-
 .viewport {
   background-color: gray;
   display: flex;
@@ -131,56 +127,77 @@
           .viewport #wrapper .slide:first-child {
             width: 100%; }
           .viewport #wrapper .slide:nth-of-type(6) {
-            width: 100%; } }
-      .viewport #wrapper .slide a {
-        width: 80px;
-        height: 80px;
-        margin: auto;
-        border-radius: 50%;
-        background-color: black;
-        opacity: 0.5; }
+            width: 100%; }
+          .viewport #wrapper .slide:hover a {
+            transition: all .4s ease-in-out;
+            transform: scale(1.25); }
+          .viewport #wrapper .slide a {
+            width: 80px;
+            height: 80px;
+            margin: auto;
+            padding: 15px;
+            border-radius: 50%;
+            background-color: black;
+            opacity: 0.5; } }
       .viewport #wrapper .slide h3 {
         align-self: flex-start;
         color: white;
-        font-family: 'Fjalla One', sans-serif;
+        font-family: "Fjalla One";
         text-transform: uppercase;
         letter-spacing: 1px; }
+        .viewport #wrapper .slide h3 .sep {
+          background-color: #dc7725;
+          width: 2em;
+          height: 5px; }
     .viewport #wrapper .slide1 {
-      background-image: url("../img/home-raft.jpg");
+      background-image: url("../img/raft.jpg");
       background-size: cover; }
       .viewport #wrapper .slide1 a {
         background-image: url("../img/icon-raft.svg");
         background-size: cover; }
     .viewport #wrapper .slide2 {
-      background-image: url("../img/home-basecamp.jpg");
+      background-image: url("../img/basecamp.jpg");
       background-size: cover; }
       .viewport #wrapper .slide2 a {
         background-image: url("../img/icon-basecamp.svg");
         background-size: cover; }
     .viewport #wrapper .slide3 {
-      background-image: url("../img/home-backpacking.jpg");
+      background-image: url("../img/backpacking.jpg");
       background-size: cover; }
       .viewport #wrapper .slide3 a {
         background-image: url("../img/icon-backpacking.svg");
         background-size: cover; }
     .viewport #wrapper .slide4 {
-      background-image: url("../img/home-canoe.jpg");
+      background-image: url("../img/canoe.jpg");
       background-size: cover; }
       .viewport #wrapper .slide4 a {
         background-image: url("../img/icon-canoe.svg");
         background-size: cover; }
     .viewport #wrapper .slide5 {
-      background-image: url("../img/home-photo.jpg");
+      background-image: url("../img/photo.jpg");
       background-size: cover; }
       .viewport #wrapper .slide5 a {
         background-image: url("../img/icon-photography.svg");
         background-size: cover; }
     .viewport #wrapper .slide6 {
-      background-image: url("../img/home-custom.jpg");
+      background-image: url("../img/custom.jpg");
       background-size: cover; }
       .viewport #wrapper .slide6 a {
         background-image: url("../img/icon-custom.svg");
         background-size: cover; }
+
+* {
+  box-sizing: border-box;
+  margin: 0; }
+
+#mid-bar {
+  height: 125px;
+  width: 100%;
+  margin: -5px 1px;
+  background-image: url("../img/texture-bar.png");
+  background-size: cover;
+  text-align: center;
+  background-color: gray; }
 
 footer {
   padding: 1em;

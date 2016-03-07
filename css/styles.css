@@ -114,31 +114,18 @@
       margin-bottom: 2em;
       padding: 2em;
       border-radius: 4px;
+      background-position: center;
       display: flex;
       flex-direction: column;
       align-items: center; }
-      @media screen and (min-width: 768px) {
-        .viewport #wrapper .slide {
-          margin: 0;
-          height: 500px;
-          border-radius: 0;
-          width: 50%;
-          background-position: center; }
-          .viewport #wrapper .slide:first-child {
-            width: 100%; }
-          .viewport #wrapper .slide:nth-of-type(6) {
-            width: 100%; }
-          .viewport #wrapper .slide:hover a {
-            transition: all .4s ease-in-out;
-            transform: scale(1.25); }
-          .viewport #wrapper .slide a {
-            width: 80px;
-            height: 80px;
-            margin: auto;
-            padding: 15px;
-            border-radius: 50%;
-            background-color: black;
-            opacity: 0.5; } }
+      .viewport #wrapper .slide a {
+        width: 80px;
+        height: 80px;
+        margin: auto;
+        padding: 15px;
+        border-radius: 50%;
+        background-color: black;
+        opacity: 0.5; }
       .viewport #wrapper .slide h3 {
         align-self: flex-start;
         color: white;
@@ -149,6 +136,19 @@
           background-color: #dc7725;
           width: 2em;
           height: 5px; }
+      .viewport #wrapper .slide:hover a {
+        transition: all .4s ease-in-out;
+        transform: scale(1.25); }
+      @media screen and (min-width: 768px) {
+        .viewport #wrapper .slide {
+          margin: 0;
+          height: 500px;
+          border-radius: 0;
+          width: 50%; }
+          .viewport #wrapper .slide:first-child {
+            width: 100%; }
+          .viewport #wrapper .slide:nth-of-type(6) {
+            width: 100%; } }
     .viewport #wrapper .slide1 {
       background-image: url("../img/raft.jpg");
       background-size: cover; }

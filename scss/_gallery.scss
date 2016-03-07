@@ -19,28 +19,8 @@
     }
     .slide {
       @include slide;
-      @media screen and (min-width: 768px) {
-        margin: 0;
-        height: 500px;
-        border-radius: 0;
-        width: 50%;
-        background-position: center;
-        &:first-child {
-          width: 100%;
-        }
-        &:nth-of-type(6) {
-          width: 100%;
-        }
-
-        &:hover {
-          a {
-            transition: all .4s ease-in-out;
-            transform: scale(1.25);
-          }
-      }
       a {
         @include slide-icon;
-        }
       }
       h3 {
         align-self: flex-start;
@@ -51,7 +31,26 @@
           height: 5px;
         }
       }
+      &:hover {
+        a {
+          transition: all .4s ease-in-out;
+          transform: scale(1.25);
+        }
+      }
+      @media screen and (min-width: 768px) {
+        margin: 0;
+        height: 500px;
+        border-radius: 0;
+        width: 50%;
+        &:first-child {
+          width: 100%;
+        }
+        &:nth-of-type(6) {
+          width: 100%;
+        }
+      }
     }
+// Individual Slide Rules
     .slide1 {
       background-image: url("../img/raft.jpg");
       background-size: cover;
